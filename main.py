@@ -1,4 +1,4 @@
-#Version 3:
+#Version 4:
 
 #functions go here
 
@@ -17,6 +17,7 @@ def pickup_delivery(question):
      total_cost.append(3)
      delivery_or_pickup.append("Delivery")
      print("You have chosen delivery...")
+     print("($3 delivery charge will be added to total)")
      print("-----------------------------------------------------------------")
 
      return response
@@ -353,7 +354,17 @@ def loop_begin(question):
   response = input(question)
   if response == "":
 
+    #clears info
+    name.clear()
+    address.clear()
+    phone_number.clear()
+    delivery_or_pickup.clear()
+    chosen.clear()
+    total_cost.clear()
+
+    #loops to beginning.
     main()
+
 
   else:
     exit()
@@ -362,7 +373,7 @@ def loop_begin(question):
 def main():
   
   print("-----------------------------------------------------------------")
-  print("Pizza Order V3") #version of code
+  print("Pizza Order V4") #version of code
   print("-----------------------------------------------------------------")
   #prints welcome
   print("Welcome to Pizza Place!")
